@@ -1,0 +1,28 @@
+{
+ "manifest_version": 2,
+ "name": "Tao Parser",
+ "version": "1.0",
+
+ "icons": {
+   "128": "icons/ace.png"
+ },
+ "content_scripts": [
+   {
+     "matches": [ "*://*/*" ],
+     "js": ["jquery.js", "content.js" ]
+   }
+ ],
+ "background": {
+   "scripts": ["background.js"],
+   "persistent": false
+ },
+ "permissions": [
+   "activeTab", "downloads", "https://world.taobao.com/", "alarms"
+ ],
+
+     "browser_action": {
+       "default_title": "Tao Parser",
+       "default_popup": "popup.html"
+   }
+
+}
